@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>My Gallery</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" media="screen" href="style/main.css" />
+    </head>
+
+    <body>
+        <div class="general">
+            <div class="header">
+                <div class="name">
+                    <h1 id="neon" class="name-neon light-none">my gallery</h1>
+                </div>
+            </div>
+
+            <div class="content">
+                <a href="#" class="button tick" id="create-album" data="create" title="create Album"></a>
+                <div id="albums-container" class="flex-container">
+                    <div id="inform-message" class="inform-message inform-message-none">У Вас нет созданных альбомов</div>
+                </div>
+
+                <div id="modal-overlay" class="modal-closed modal-overlay"></div>
+
+                <div id="modal-window" class="modal-window modal-closed">
+                    <div>
+                        <button id="modal-button-close" class="modal-button-close" title="Закрыть модальное окно">X</button>
+                        <form name="modalForm" class="modal-form">
+                            <input name="name" placeholder="Укажите наименование Альбома:" class="name" required />
+                            <textarea rows="4" cols="50" name="description" placeholder="Введите описание Альбома:" class="message" required></textarea>
+                            <input name="submit" class="btn" type="button" value="Изменить" />
+                        </form>
+                    </div>
+                </div>
+
+                <div id="foto-container" class="foto-container foto-container-none">
+                    <div class="album-info">
+                        <div id="album-info-title" class="album-info-title"></div>
+                        <div id="album-info-name" class="album-info-name"></div>
+                        <div id="album-description" class="album-description"></div>
+                        <div id="foto-count" class="foto-count"></div>
+                        <div id="add-foto" class="add-foto">
+                            <button id="addFoto" class="controls-btn">add Foto</button>
+                            <input type="file" name="addImg" id="addImg">
+                        </div>
+                    </div>
+
+                    <button class="close-button-foto" id="close-button-foto">Закрыть</button>
+
+                    <div class="foto-list">
+                        <div id="inform-message-foto" class="inform-message-foto inform-message-none">
+                            <p>В этом Альбоме нет Фотографий</p>
+                        </div>
+                        <div id="wrong-file" class="wrong-file wrong-file-none">
+                            <p>Выбpанный файл не являтся изображением</p>
+                        </div>
+                        <div id="foto-place" class="foto-wrap"></div>
+                    </div>
+                </div>
+
+                <div id="slider-container" class="slider-container slider-container-none">
+                    <button id="slider-button-close" class="slider-button-close">X</button>
+                    <div class="border">
+                        <div id="slideShow-container"></div>
+                    </div>
+                    <div class="slider-button">
+                        <button class="controls controls-btn" data-slider="previous">Previous</button>
+                        <button id="showSlides" class="controls controls-btn" data-slider="play">Play</button>
+                        <button class="controls controls-btn" data-slider="next">Next</button>
+                    </div>
+                </div>
+
+            </div>
+            <div class="footer">
+                <hr>
+                <span id="btn-light" class="toggle">
+                    <input type="checkbox">
+                    <label data-on="on" data-off="off"></label>
+                </span>
+            </div>
+        </div>
+
+        <script src="js/main.js"></script>
+        <script src="js/Object.js"></script>
+        <script src="js/functions.js"></script>
+        <script src="js/controls.js"></script>
+
+
+    </body>
+
+</html>
